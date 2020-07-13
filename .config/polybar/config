@@ -115,7 +115,7 @@ font-2 = Font Awesome 5 Free Solid:pixelsize=12;3
 font-3 = Font Awesome 5 Brands:pixelsize=12;3
 font-4 = SpaceMono Nerd Font:pixelsize=12;3
 
-modules-left = i3 bspwm wlan larrow2 battery larrow1
+modules-left = i3 bspwm wlan larrow2 battery larrow1 title
 modules-center = spotify
 modules-right = arrow1 pulseaudio arrow 2 xkeyboard arrow3 memory arrow4 cpu arrow5 date date2
 
@@ -256,6 +256,14 @@ label-empty-padding = 2
 ###########################################################
 ##################### regular modules #####################
 ###########################################################
+
+[module/title]
+type = internal/xwindow
+format = <label>
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+format-padding = 4
+label-empty =
 
 [module/mpd]
 type = internal/mpd
@@ -519,4 +527,5 @@ type = custom/text
 content = " "
 content-foreground = ${colors.xcolor6}
 content-background = ${colors.xcolor4}
+
 

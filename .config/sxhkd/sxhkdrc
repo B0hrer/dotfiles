@@ -2,17 +2,8 @@
 
 super + shift + m
 	firefox
-
 super + shift + n
 	thunar
-
-# chromium
-super + b
-	chromium
-
-# spotify
-super + m
-	spotify
 
 #Scrot [Shots currently go to your Pictures folder]
 Print
@@ -58,6 +49,18 @@ super + Return
 # program launcher
 super + d
 	rofi -show run
+
+# chromium
+super + b
+	chromium
+
+# spotify
+super + m
+	spotify
+
+# betterlockscreen
+super + shift + x
+	betterlockscreen -l dim
 
 # make sxhkd reload its configuration files:
 super + Escape
