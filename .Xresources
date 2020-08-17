@@ -1,5 +1,5 @@
 
-URxvt.font: xft:UbuntuMono Nerd Font Mono:size=15
+URxvt.font: xft:Hack:size=14:style=Regular, xft:symbola:size=14
 URxvt*letterSpace: -1
 urxvt*depth: 32
 URxvt.scrollBar: false

@@ -60,7 +60,7 @@ super + m
 
 # betterlockscreen
 super + shift + x
-	betterlockscreen -l dim
+	betterlockscreen -l blur
 
 # make sxhkd reload its configuration files:
 super + Escape
