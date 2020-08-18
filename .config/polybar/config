@@ -1,4 +1,4 @@
-;=========================================================
+w;=========================================================
 ;
 ;
 ;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
@@ -62,7 +62,6 @@ xcolor13 = ${xrdb:color13}
 xcolor14 = ${xrdb:color14}
 xcolor15 = ${xrdb:color15}
 
-
   _                
  | |               
  | |__   __ _ _ __ 
@@ -101,10 +100,8 @@ border-color-foreground = ${xrdb:color7:#222}
 spacing = 0
 padding-left = 0
 padding-right = 0
-;label-padding = 2
 module-margin-left = 0
 module-margin-right = 0
-
 
 ##################### fonts and layout ####################
 
@@ -117,7 +114,7 @@ font-4 = SpaceMono Nerd Font:pixelsize=12;3
 
 modules-left = i3 bspwm wlan larrow2 battery larrow1 title
 modules-center = spotify
-modules-right = xkeyboard arrow1 pulseaudio arrow3 memory arrow4 cpu arrow5 date date2 arrow0
+modules-right = xkeyboard arrow1 pulseaudio arrow3 memory arrow4 cpu temp  arrow5 date date2 arrow0
 
 tray-position = right
 tray-padding = 1
@@ -280,11 +277,10 @@ label-song-ellipsis = true
 [module/cpu]
 type = internal/cpu
 interval = 2
-format =  <label>
-;format-prefix-foreground = ${colors.foreground-alt}
-format-underline = 
+format-prefix = 
+format-prefix-padding-right = 
 label = %percentage:3%%
-format-prefix-font = 3
+label-padding-right = 2
 
 ramp-coreload-spacing = 1
 ramp-coreload-0 = ▁
@@ -295,6 +291,28 @@ ramp-coreload-4 = ▅
 ramp-coreload-5 = ▆
 ramp-coreload-6 = ▇
 ramp-coreload-7 = █
+
+format-foreground = ${colors.icons}
+label-foreground = ${colors.foreground}
+label-background = ${colors.xcolor13}
+format-background = ${colors.xcolor13}
+
+
+[module/temp]
+type = internal/temperature
+interval = 2
+
+units = false
+warn-temperature = 80
+
+; Normal
+format-prefix = 
+format-prefix-padding-right = 1
+label = %temperature-c% °C
+
+; Warning
+
+format-warn-prefix = 﨏
 
 format-foreground = ${colors.icons}
 label-foreground = ${colors.foreground}
@@ -322,16 +340,17 @@ type = internal/network
 interface = wlp4s0
 interval = 3.0
 
-format-connected =   <label-connected>
-; label-connected =  %essid%  %downspeed%   %upspeed% 
-label-connected = %signal% %essid%
+format-connected-prefix = 
+format-connected-prefix-padding-right = 1
+label-connected =  %downspeed% //  %upspeed%
 
 format-connected-foreground = ${colors.icons}
 format-connected-background = ${colors.xcolor6}
 label-connected-foreground = ${colors.foreground}
 label-connected-background = ${colors.xcolor6}
 
-format-disconnected =  <label-disconnected>
+format-disconnected-prefix = 
+format-disconnected-prefix-padding = 1 
 label-disconnected = "no signal"
 
 format-disconnected-foreground = ${colors.icons}
@@ -350,6 +369,7 @@ format-prefix = ""
 date = " %d.%m.%Y"
 
 label = %date%
+label-padding-right = 1
 
 format-foreground = ${colors.icons}
 label-foreground = ${colors.foreground}
