@@ -4,7 +4,7 @@ gruvbux themed bspwm setup
 
 installed software
 - wm:	 bspwm sxhkd polybar picom-tyrone-git rofi i3lock betterlockscreen
-- tools: playerctl pulseaudio-alsa pavucontrol light (backlightcontrol) feh (setting wallpapers) urxvt (+addons) xorg-server xf86-input-synaptics
+- tools: playerctl pulseaudio-alsa pavucontrol light (backlightcontrol) feh (setting wallpapers) urxvt (+addons) xorg-server xf86-input-synaptics spicetify-cli
 - additional stuff: networkmanager nm-applet
 - fonts: ttf-hack ttf-symbola
 
