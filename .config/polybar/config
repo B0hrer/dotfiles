@@ -312,7 +312,7 @@ label = %temperature-c% °C
 
 ; Warning
 
-format-warn-prefix = 﨏
+format-warn-prefix = ␖
 
 format-foreground = ${colors.icons}
 label-foreground = ${colors.foreground}
