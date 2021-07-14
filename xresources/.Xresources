@@ -1,36 +1,3 @@
-#
-URxvt.font: xft:JetBrains Mono Medium:size=14:style=Regular, xft:symbola:size=14 URxvt*letterSpace: -1
-urxvt*depth: 32
-URxvt.scrollBar: false
-!clickable urls
-URxvt.url-launcher: /usr/bin/xdg-open
-
-URxvt.intensityStyles: false
-URxvt.transparent:   false
-URxvt.depth: 24
- 
-Xft.dpi: 96
-Xft.antialias: true
-Xft.hinting: true
-Xft.rgba: rgb
-Xft.autohint: false
-Xft.hintstyle: hintslight
-Xft.lcdfilter: lcddefault
- 
-URxvt.perl-ext-common: default,matcher,fullscreen,clipboard,resize-font
-URxvt.matcher.button: 1
-URxvt.keysym.F11: perl:fullscreen:switch
-URxvt.secondaryWheel: 1
-URxvt.internalBorder:  5
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-
-URxvt.keysym.C-Up:     font-size:increase
-URxvt.keysym.C-Down:   font-size:decrease
-URxvt.keysym.C-S-Up:   font-size:incglobal
-URxvt.keysym.C-S-Down: font-size:decglobal
-URxvt.keysym.C-equal:  font-size:reset
-URxvt.keysym.C-slash:  font-size:show
-
 ! rofi
 rofi.lines: 5
 
