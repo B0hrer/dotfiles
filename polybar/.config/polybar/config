@@ -187,6 +187,7 @@ format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 
 format-full-prefix = " "
+format-full-prefix-foreground = ${xrdb:color2}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
