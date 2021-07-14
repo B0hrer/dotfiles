@@ -1,0 +1,204 @@
+[colors]
+background = ${xrdb:background}
+background-wm = ${xrdb:color8}
+background-alt = ${xrdb:color0}
+foreground = ${xrdb:foreground}
+foreground-alt = ${xrdb:color7}
+primary = ${xrdb:color4}
+alert = ${xrdb:color1}
+
+[settings]
+format-foreground =
+format-underline = ${xrdb:color12}
+format-background = ${colors.background}
+format-padding = 0
+format-margin = 0
+format-offset =
+screenchange-reload = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[bar/bar]
+monitor = ${env:MONITOR:DVI-D-0}
+monitor-fallback = ${env:MONITOR:eDP-1}
+monitor-strict = true
+monitor-exact = true
+override-redirect = false
+wm-restack = bspwm
+enable-ipc = true
+fixed-center = true
+bottom = false
+separator =
+
+width = 99%
+height = 28
+offset-x = 0.6%
+offset-y = 0.6%:-2
+;radius-top = 12.0
+;radius-bottom = 12.0
+
+;padding-left = 3
+;padding-right = 3
+module-margin-left = 0
+module-margin-right = 1
+
+underline-size = 3
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = SFProText:style=Medium:pixelsize=12;
+# font-0 = JetBrainsMonoMedium:pixelsize=11;
+font-1 = NotoColorEmoji:fontformat=truetype:scale=10:antialias=false;
+font-2 = Font Awesome 5 Free:pixelsize=12;1
+font-3 = Font Awesome 5 Free Solid:pixelsize=12;1
+font-4 = Font Awesome 5 Brands:pixelsize=12;1
+font-5 = HackNerdFont:pixelsize=14;2
+font-6 = IPAGothic:fontformat=truetype:pixelsize=10:antialias=false;
+
+modules-left = bspwm xwindow
+modules-center = spotify
+modules-right = battery volume cpu memory time powermenu
+
+tray-position = right
+tray-reparent = true
+tray-padding = 1
+tray-background = ${colors.background}
+tray-offset-x =
+;tray-offset-y = 0
+tray-scale = 1.0
+
+cursor-click = pointer
+cursor-scroll = default
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+format-foreground = #ffffff
+format-underline =
+format-background =
+format-padding = 2
+
+[module/bspwm]
+type = internal/bspwm
+
+ws-icon-0 = I;1:
+ws-icon-1 = II;2:
+ws-icon-2 = III;3:
+ws-icon-3 = IV;4:
+ws-icon-4 = V;5:
+ws-icon-default = 
+
+pin-workspaces = true
+
+enable-scroll = true
+label-focused = %icon%
+label-focused-foreground = ${xrdb:color14}
+label-focused-padding = 1
+
+label-occupied = %icon%
+label-occupied-padding = 1
+
+label-urgent = %icon%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+
+label-empty = %icon%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 1
+
+format-underline =
+format-background =
+format-padding =
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+; Separator in between workspaces
+label-separator = 
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix-font = 3
+format = 🧠<label>
+
+[module/cpu]
+type = internal/cpu
+; label = %percentage:3%%
+click-left = $TERMINAL -e htop &
+interval = 10
+format = 💻<label>
+
+[module/cpu-temperature]
+type = custom/script
+exec = polytempamd
+label = "%output%"
+interval = 10
+format = 🔥<label>
+
+[module/volume]
+type = internal/pulseaudio
+format-volume = <ramp-volume><label-volume>
+label-volume = %percentage%%
+label-muted =   muted
+label-muted-foreground = #666
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+ramp-volume-foreground = ${xrdb:color4}
+ramp-volume-padding-right = 1
+
+[module/time]
+type = custom/script
+exec = date '+%d.%m.%Y - %H:%M'
+format = 📅<label>
+click-left = thunderbird &
+label = "%output%"
+interval = 1
+
+[module/spotify]
+type = custom/script
+exec = ~/.config/polybar/spotify.sh %artist% - %title%
+tail = true
+interval = 2
+format-prefix-foreground = ${xrdb:color2}
+format-underline =
+format-prefix = " "
+
+[module/powermenu]
+type = custom/text
+content = 
+click-left = rofi -show power-menu -modi "power-menu:rofi-power-menu --choices=shutdown/reboot --no-symbols" -width 20 -lines 2
+content-underline =
+content-padding = 2
+content-foreground = ${xrdb:color5}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ACAD
+full-at = 98
+
+format-charging = <animation-charging> <label-charging>
+
+format-discharging = <ramp-capacity> <label-discharging>
+
+format-full-prefix = " "
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = ${xrdb:color2}
+
+animation-charging-0 = ⚡
+animation-charging-1 = ⚡
+animation-charging-2 = ⚡
+animation-charging-3 = ⚡
+animation-charging-4 = ⚡
+animation-charging-foreground = ${xrdb:color2}
+animation-charging-framerate = 750

@@ -1,0 +1,84 @@
+#! /bin/sh
+
+#### AUTOSTART ####
+sxhkd &
+picom --experimental-backends &
+nm-applet &
+polybar bar &
+dunst &
+nitrogen --restore &
+xset -b & #For annoying beeping sound
+start-pulseaudio-x11 &
+xsetroot -cursor_name left_ptr &
+bsp-layout set tall IV --master-size 0.85 &
+
+#### WORKSPACES AND BORDERS ####
+
+if [[ $(xrandr | grep " connected " | awk -vORS=, '{ print $1 }' | sed 's/,$/\n/') = "DVI-D-0,HDMI-0" ]]; then
+	xrandr --output DVI-D-0 --mode 1920x1080 --rate 144.00 --output HDMI-0 --mode 1920x1080 --rate 60.00 --right-of DVI-D-0 & ## desktop screen config ##
+    	nvidia-settings --load-config-only &
+	bspc monitor DVI-D-0 -d I II III IV V
+	bspc monitor HDMI-01 -d VI VII
+elif [[ $(xrandr | grep " connected " | awk -vORS=, '{ print $1 }' | sed 's/,$/\n/') = "eDP-1,DP-1-3" ]]; then
+	xrandr --output eDP-1 --mode 1920x1080 --rate 60.05 --output DP-1-3 --mode 1920x1080 --rate 60.00 --right-of eDP-1 &
+	bspc monitor eDP-1  -d I II III IV V
+	bspc monitor DP-1-3 -d VI VII
+	synclient TapButton1=1 TapButton2=3 TapButton3=2 & #For laptop touchpad
+elif [[ $(xrandr | grep " connected " | awk -vORS=, '{ print $1 }' | sed 's/,$/\n/') = "eDP-1" ]]; then
+	bspc monitor eDP-1  -d I II III IV V
+	synclient TapButton1=1 TapButton2=3 TapButton3=2 & #For laptop touchpad
+fi
+
+bspc config border_width       		2
+bspc config window_gap         	 	4
+
+## Coloring acording to .Xresources - credits to 'https://github.com/addy-dclxvi/void-bspwm-dotfiles'
+getcolors () {
+	FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
+	BACKGROUND=$(xrdb -query | grep 'background:'| awk '{print $NF}')
+	BLACK=$(xrdb -query | grep 'color0:'| awk '{print $NF}')
+	RED=$(xrdb -query | grep 'color1:'| awk '{print $NF}')
+	GREEN=$(xrdb -query | grep 'color2:'| awk '{print $NF}')
+	YELLOW=$(xrdb -query | grep 'color3:'| awk '{print $NF}')
+	BLUE=$(xrdb -query | grep 'color4:'| awk '{print $NF}')
+	MAGENTA=$(xrdb -query | grep 'color5:'| awk '{print $NF}')
+	CYAN=$(xrdb -query | grep 'color6:'| awk '{print $NF}')
+	WHITE=$(xrdb -query | grep 'color7:'| awk '{print $NF}')
+}
+xrdb ~/.Xresources
+COLOR=$(shuf -n1 -e ~/.colors/*)
+SHORTCOLOR=$(echo $COLOR | sed "s@.*/@@")
+xrdb -merge $COLOR
+paintee
+
+# Only use the function above if the cache of paintee couldn't be found
+if [ -e ~/.cache/paintee ]; then
+	. ~/.cache/paintee
+	else
+	getcolors
+fi
+
+# colors #
+bspc config normal_border_color "#44475a"
+bspc config active_border_color "$BLUE"
+bspc config focused_border_color "$MAGENTA"
+bspc config presel_feedback_color "#6272a4"
+
+bspc config split_ratio          0.52
+#bspc config borderless_monocle   true
+#bspc config gapless_monocle      true
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a spotify desktop='^3'
+bspc rule -a minecraft-launcher desktop='^4'
+bspc rule -a Steam desktop='^4'
+bspc rule -a discord desktop='^5'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a Zathura state=tiled
+
+#Focus on pointer
+bspc config focus_follows_pointer true
+bspc config pointer_follows_focus true
