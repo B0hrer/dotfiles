@@ -1,4 +1,13 @@
-packadd! dracula
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+
+call plug#begin('~/.vim/plugged')
+Plug 'itchyny/lightline.vim'
+Plug 'ap/vim-css-color'
+Plug 'dracula/vim', { 'as': 'dracula' }
+call plug#end()
+
 let g:dracula_colorterm = 0
 set t_Co=256
 colorscheme dracula
