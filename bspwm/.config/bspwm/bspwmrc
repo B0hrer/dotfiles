@@ -24,8 +24,8 @@ elif [[ $(xrandr | grep " connected " | awk -vORS=, '{ print $1 }' | sed 's/,$/\
 	bspc monitor eDP-1  -d I II III IV V
 	bspc monitor DP-1-3 -d VI VII
 	synclient TapButton1=1 TapButton2=3 TapButton3=2 & #For laptop touchpad
-elif [[ $(xrandr | grep " connected " | awk -vORS=, '{ print $1 }' | sed 's/,$/\n/') = "eDP-1" ]]; then
-	bspc monitor eDP-1  -d I II III IV V
+else	# fallback for unknown displays like VMs #	
+	bspc monitor -d I II III IV V &
 	synclient TapButton1=1 TapButton2=3 TapButton3=2 & #For laptop touchpad
 fi
 
