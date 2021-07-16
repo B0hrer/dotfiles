@@ -21,8 +21,8 @@ margin-top = 0
 margin-bottom = 0
 
 [bar/bar]
-monitor = ${env:MONITOR:DVI-D-0}
-monitor-fallback = ${env:MONITOR:eDP-1}
+monitor = ${env:MONITOR:}
+; monitor-fallback = ${env:MONITOR:eDP-1}
 monitor-strict = true
 monitor-exact = true
 override-redirect = false
