@@ -10,6 +10,7 @@ nitrogen --restore &
 xset -b & #For annoying beeping sound
 start-pulseaudio-x11 &
 xsetroot -cursor_name left_ptr &
+lxpolkit & #password authentication
 bsp-layout set tall IV --master-size 0.85 &
 
 #### WORKSPACES AND BORDERS ####
