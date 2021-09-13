@@ -48,7 +48,7 @@ super + Return
 
 # program launcher
 super + r
-	rofi -show drun -show-icons
+	rofi -show drun -theme $HOME/.config/rofi/dracula.rasi -show-icons
 
 # chromium
 super + b

@@ -171,7 +171,7 @@ format-prefix = " "
 [module/powermenu]
 type = custom/text
 content = 
-click-left = rofi -show power-menu -modi "power-menu:rofi-power-menu --choices=shutdown/reboot --no-symbols" -width 20 -lines 2
+click-left = rofi -show power-menu -modi "power-menu:rofi-power-menu --choices=shutdown/reboot" -listview-lines 2 -theme $HOME/.config/rofi/dracula.rasi
 content-underline =
 content-padding = 2
 content-foreground = ${xrdb:color5}
@@ -203,3 +203,5 @@ animation-charging-3 = ⚡
 animation-charging-4 = ⚡
 animation-charging-foreground = ${xrdb:color2}
 animation-charging-framerate = 750
+
+; vim:ft=dosini
