@@ -1,7 +1,7 @@
 #! /bin/sh
 
 #### AUTOSTART ####
-# picom --experimental-backends &
+picom --experimental-backends &
 ./.config/polybar/launchpolybar &
 dunst &
 nitrogen --restore &
@@ -9,11 +9,11 @@ lxpolkit & #password authentication
 bsp-layout set tall IV --master-size 0.85 &
 
 #### moved to .xinitrc #####
-# sxhkd &
-# nm-applet &
-# xset -b & #For annoying beeping sound
-# start-pulseaudio-x11 &
-# xsetroot -cursor_name left_ptr &
+ sxhkd &
+ nm-applet &
+ xset -b & #For annoying beeping sound
+ start-pulseaudio-x11 &
+ xsetroot -cursor_name left_ptr &
 #### WORKSPACES AND BORDERS ####
 
 if [[ $(xrandr | grep " connected " | awk -vORS=, '{ print $1 }' | sed 's/,$/\n/') = "DVI-D-0,HDMI-0" ]]; then

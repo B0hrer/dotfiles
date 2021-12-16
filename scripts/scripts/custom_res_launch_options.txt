@@ -1,0 +1,3 @@
+ /home/b0hrer/scripts/1280.sh; %command%; /home/b0hrer/scripts/1920.sh
+
+runs before launch; commands %command% normal lauch options; runs after closing

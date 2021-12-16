@@ -52,7 +52,7 @@ super + r
 
 # chromium
 super + b
-	google-chrome-stable
+	chromium
 
 # spotify
 super + m
