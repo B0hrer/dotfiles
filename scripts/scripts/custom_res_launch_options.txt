@@ -1,3 +1,7 @@
- /home/b0hrer/scripts/1280.sh; %command%; /home/b0hrer/scripts/1920.sh
+~/scripts/1280.sh; %command%; ~/scripts/1920.sh
 
 runs before launch; commands %command% normal lauch options; runs after closing
+
+### Game launch options ####
+#PS2
+~/scripts/1280.sh; gamemoderun mangohud %command% --disable-gpu; ~/scripts/1920.sh
