@@ -1,7 +1,7 @@
 #! /bin/bash
 
 function powermenu {
-	options="Cancel\nShutdwon\nRestart\nSleep"
+	options="Cancel\nShutdown\nRestart\nSleep"
 	selected=$(echo -e $options | dmenu)
 	if [[ $selected = "Shutdown" ]]; then
 		poweroff	
