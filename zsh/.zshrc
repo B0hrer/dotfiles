@@ -296,3 +296,6 @@ zstyle '*' single-ignored show
 ### Source plugins
 ##################
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+preexec() { print -Pn "\e]0;$1\a" }
+
