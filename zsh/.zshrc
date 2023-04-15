@@ -299,3 +299,8 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 preexec() { print -Pn "\e]0;$1\a" }
 
+alias protontricks='flatpak run com.github.Matoking.protontricks'
+alias protontricks-launch='flatpak run --command=protontricks-launch com.github.Matoking.protontricks'
+
+# Created by `pipx` on 2023-04-12 19:57:45
+export PATH="$PATH:/home/b0hrer/.local/bin"

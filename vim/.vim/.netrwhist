@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/b0hrer/wine-tkg-git/proton-tkg'
+let g:netrw_dirhist_5='/home/b0hrer/wine-tkg-git'
+let g:netrw_dirhist_4='/home/b0hrer/dotfiles/xinitrc'
 let g:netrw_dirhist_3='/usr/share/X11/xorg.conf.d'
 let g:netrw_dirhist_2='/home/b0hrer/dotfiles/polybar/.config'
 let g:netrw_dirhist_1='/home/b0hrer/.config/polybar'
