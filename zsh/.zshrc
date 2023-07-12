@@ -304,3 +304,4 @@ alias protontricks-launch='flatpak run --command=protontricks-launch com.github.
 
 # Created by `pipx` on 2023-04-12 19:57:45
 export PATH="$PATH:/home/b0hrer/.local/bin"
+
