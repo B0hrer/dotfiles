@@ -1,0 +1,42 @@
+* {
+  font-family: SFProText;
+  font-size: 14px;
+  color: #ebdbb2;
+  background: transparent;
+}
+
+#window {
+  background: #282828;
+  margin: auto;
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid #83a598;
+}
+
+#input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+#outer-box {
+  padding: 20px;
+}
+
+#img {
+  margin-right: 6px;
+}
+
+#entry {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#entry:selected {
+  color: #1d2021;
+  background-color: #83a598;
+}
+
+#text {
+  margin: 2px;
+}

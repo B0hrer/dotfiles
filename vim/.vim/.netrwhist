@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/b0hrer/dotfiles/sxhkd/.config/sxhkd'
+let g:netrw_dirhist_8='/home/b0hrer/dotfiles/sxhkd/.config'
+let g:netrw_dirhist_7='/home/b0hrer/.config/waybar/scripts'
 let g:netrw_dirhist_6='/home/b0hrer/wine-tkg-git/proton-tkg'
 let g:netrw_dirhist_5='/home/b0hrer/wine-tkg-git'
 let g:netrw_dirhist_4='/home/b0hrer/dotfiles/xinitrc'

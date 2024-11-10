@@ -6,15 +6,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-css-color'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'morhetz/gruvbox'
 call plug#end()
 
-let g:dracula_colorterm = 0
-set t_Co=256
-colorscheme dracula
-
-let g:lightline = {
-      \ 'colorscheme': 'dracula',
-      \ }
+autocmd vimenter * ++nested colorscheme gruvbox 
+set background=dark 
 
 syntax on
 set number
