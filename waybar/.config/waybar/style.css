@@ -3,7 +3,6 @@
 	font-family: FontAwesome, SFProText, sans-serif;
 	font-size: 14px;
 	font-weight: 500;
-	opacity: 1;
 }
 
 window#waybar {
@@ -22,7 +21,6 @@ window#waybar > box {
 	border-bottom-right-radius: 12px;
 	border-bottom-left-radius: 12px;
 	border: 1px solid rgba(44, 45, 46, 0.3);
-	box-shadow: 0px 0px 10px -5px rgba(44, 45, 46, 1);
 }
 
 window#waybar.empty {
