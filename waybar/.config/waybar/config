@@ -45,9 +45,9 @@
     },
     "clock": {
         "interval": 60,
-        "format": "{:%a %b %d  %H:%M}", // %b %d %Y  --Date formatting
+        "format": "{:%a %d.%b  %H:%M}", // %b %d %Y  --Date formatting
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%m-%d-%Y}"
+        "format-alt": "{:%d.%m.%Y}"
     },
    "temperature": {
         "critical-threshold": 80,
