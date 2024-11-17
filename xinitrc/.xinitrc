@@ -21,8 +21,8 @@ picom &
 dunst &
 
 slstatus &
-xrandr --output DVI-D-0 --auto --mode 1920x1080 --rate 144.00 &
-xrandr --output DP-1 --auto --mode 1920x1080 --rate 60.00 --right-of DVI-D-0 &
+xrandr --output DP-0 --auto --mode 2560x1440 --rate 240.00 &
+xrandr --output HDMI-A-1 --auto --mode 1920x1080 --rate 60.00 --right-of DP-0 &
 nvidia-settings --load-config-only &
 xdotool mousemove 960 540 & #set pointer to right position
 xinput set-prop 'Logitech USB Receiver' 'libinput Accel Speed' -0.4 &
