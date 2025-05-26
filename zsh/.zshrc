@@ -307,3 +307,5 @@ export PATH="$PATH:/home/b0hrer/.local/bin"
 
 
 export PATH=$PATH:/home/b0hrer/.spicetify
+export QT_QPA_PLATFORMTHEME="qt6ct"
+export QT_STYLE_OVERRIDE="qt6ct" 

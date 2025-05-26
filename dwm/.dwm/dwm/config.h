@@ -13,8 +13,8 @@ static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 //static const char *fonts[]          = { "Jetbrains Mono-Medium:size=12", "fontawesome:size=12", "NotoColorEmoji:size=12" };
-static const char *fonts[]          = { "Jetbrains Mono-Medium:size=8", "Font Awesome 5 Brands:size=8", "fontawesome:size=8", "NotoColorEmoji:size=8" };
-static const char dmenufont[]       = "Jetbrains Mono-Medium:size=8";
+static const char *fonts[]          = { "Jetbrains Mono-Medium:size=10", "Font Awesome 5 Brands:size=10", "fontawesome:size=10", "NotoColorEmoji:size=10" };
+static const char dmenufont[]       = "Jetbrains Mono-Medium:size=10";
 //background color
 static const char col_gray1[]       = "#282828";
 //inactive window border color
@@ -42,12 +42,9 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "firefox",  NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "Chromium", NULL,       NULL,       1 << 2,  	    0,           -1 },
-	{ "Brave-browser", NULL,       NULL,       1 << 2,  	    0,           -1 },
 	{ "steam",    NULL,       NULL,       1 << 3,  	    0,           -1 },
 	{ "obs",      NULL,       NULL,       1 << 3,  	    0,            1 },
-	{ "discord",  NULL,       NULL,       1 << 4,  	    0,            1 },
+	{ "vesktop",  NULL,       NULL,       1 << 4,  	    0,            1 },
 	{ "spotify",  NULL,       NULL,       1 << 5,  	    0,           -1 },
 };
 

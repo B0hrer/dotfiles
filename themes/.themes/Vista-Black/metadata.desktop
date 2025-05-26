@@ -1,0 +1,22 @@
+[Contrast Effect]
+contrast=1
+enabled=True
+intensity=1
+saturation=1.7
+
+[Desktop Entry]
+Comment=Seven Black theme with glass effect and reflections
+Name=Seven Black
+X-TDE-PluginInfo-Author=Mirko Gennari
+X-TDE-PluginInfo-Category=Plasma Theme
+X-TDE-PluginInfo-Depends=KDE5
+X-TDE-PluginInfo-Email=mirkogen@hotmail.it
+X-TDE-PluginInfo-EnabledByDefault=True
+X-TDE-PluginInfo-License=GPL
+X-TDE-PluginInfo-Name=Seven Black
+X-TDE-PluginInfo-Version=1.0.91
+X-TDE-PluginInfo-Website=http://www.techbulk.net
+X-Plasma-API=5.0
+
+[Settings]
+UseNativeWidgetStyle=True

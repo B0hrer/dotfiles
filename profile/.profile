@@ -1,5 +1,5 @@
 # sxhkd &
-export QT_QPA_PLATFORMTHEME="qt6ct" &
+export QT_QPA_PLATFORMTHEME="kde" &
 nm-applet &
 xset -b & #For annoying beeping sound
 start-pulseaudio-x11 &
